@@ -1,0 +1,14 @@
+package com.mall.gulimall.member.feign;
+
+
+import com.mall.common.utils.R;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@FeignClient(name = "gulimall-coupon")
+public interface CouponFeignService {
+
+    @RequestMapping("/coupon/coupon/member/list")
+    public R membercoupon();
+}
