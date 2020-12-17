@@ -56,7 +56,7 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
     }
 
     private List<CategoryEntity> getChilds(CategoryEntity current, List<CategoryEntity> all) {
-        List<CategoryEntity> collect = all.stream().filter(menu -> menu.getParentCid() == current.getCatId())
+        List<CategoryEntity> collect = all.stream().filter(menu -> menu.getParentCid().equals(current.getCatId()))
                 .map(menu -> {
                     menu.setChilderCategory(getChilds(menu, all));
                     return menu;

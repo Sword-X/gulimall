@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: gulimall-gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: www.nacos-config.com
+        enabled: false
+  profiles:
+    active: dev

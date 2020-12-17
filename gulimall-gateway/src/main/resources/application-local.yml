@@ -27,7 +27,7 @@ spring:
               - RewritePath=/api/(?<segment>/?.*), /renren-fast/$\{segment}
 
       nacos:
-        server-addr: 127.0.0.1:8848
+        server-addr: 172.0.0.1:8848
 server:
   port: 88
 #  前端项目，/api
